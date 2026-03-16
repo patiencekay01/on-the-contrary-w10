@@ -10,10 +10,7 @@ export default async function Home() {
         <NavBar />
 
       </header>
-      
-      <main>
 
-      </main>
     </div>
   );
 }

@@ -11,7 +11,17 @@ export default function Menu() {
       </DropdownMenu.Trigger>
         
 		<DropdownMenu.Portal>
-        <DropdownMenu.Content>
+        <DropdownMenu.Content
+        style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+            padding: "12px",
+            backgroundColor: "white",
+            border: "1px solid #ccc",
+            borderRadius: "8px",
+          }}
+        >
           <DropdownMenu.Item asChild>
             <Link href="/">Home</Link>
           </DropdownMenu.Item>
