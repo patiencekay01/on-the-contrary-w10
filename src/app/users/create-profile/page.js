@@ -9,6 +9,17 @@ export default function CreateProfilePage () {
         const {username, bio} = Object.fromEntries(formData) 
         const {userId} = await auth()
 
+        const existingUser = (
+        await db.query(
+        `SELECT * FROM users WHERE clerk_id = $1`,
+        [userId]
+      )
+    ).rows
+
+        if (existingUser.length > 0) {
+      redirect(`/users/${userId}`)
+    }
+
         const data = await db.query(`INSERT INTO users (username, bio, clerk_id) VALUES ($1, $2, $3)`, [username, bio, userId])
 
         redirect(`/users/${userId}`)

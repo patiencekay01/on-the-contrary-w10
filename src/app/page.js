@@ -8,6 +8,7 @@ export default async function Home() {
     <div>
       <header>
         <NavBar />
+
       </header>
       
       <main>
