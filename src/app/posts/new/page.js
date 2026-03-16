@@ -24,7 +24,7 @@ export default async function NewPost() {
             <h3>In my opinion...</h3>
 
             <form action={handleNewPost}>
-            <textarea name="content" placeholder="Add yours here..."/>
+            <textarea name="content" placeholder="Add yours here..." required/>
             <button type="submit">Submit</button>
             </form>
         </div>
