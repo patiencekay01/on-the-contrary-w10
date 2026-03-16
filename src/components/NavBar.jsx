@@ -1,18 +1,15 @@
-import DropdownMenu from "./DropdownMenu"
+import Menu from "./DropdownMenu"
 
 export default function NavBar () {
     return (
-        <div>
+        <nav>
             <div>
             <h1> On The Contrary</h1>
             </div>
 
             <div>
-                <DropdownMenu />
-                <Link href='/'>Home</Link>
-                <Link href='/posts'>Posts</Link>
-                <Link href='/users/profile'>Profile</Link>
+                <Menu />
             </div>
-        </div>
+        </nav>
     )
 }

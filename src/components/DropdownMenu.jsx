@@ -1,38 +1,34 @@
-import { DropdownMenu } from "radix-ui";
+'use client'
 
-export default () => (
-	<DropdownMenu.Root>
-		<DropdownMenu.Trigger />
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import Link from "next/link";
 
+export default function Menu() {
+  return (
+    <DropdownMenu.Root>
+      <DropdownMenu.Trigger asChild>
+        <button>Menu ⮟</button>
+      </DropdownMenu.Trigger>
+        
 		<DropdownMenu.Portal>
-			<DropdownMenu.Content>
-				<DropdownMenu.Label />
-				<DropdownMenu.Item />
+        <DropdownMenu.Content>
+          <DropdownMenu.Item asChild>
+            <Link href="/">Home</Link>
+          </DropdownMenu.Item>
 
-				<DropdownMenu.Group>
-					<DropdownMenu.Item />
-				</DropdownMenu.Group>
+				<DropdownMenu.Item asChild>
+                    <Link href="/posts">Posts</Link>
+                </DropdownMenu.Item>
+        
+        <DropdownMenu.Item asChild>
+            <Link href="/users/profile">Profile</Link>
+          </DropdownMenu.Item>
 
-				<DropdownMenu.CheckboxItem>
-					<DropdownMenu.ItemIndicator />
-				</DropdownMenu.CheckboxItem>
-
-				<DropdownMenu.RadioGroup>
-					<DropdownMenu.RadioItem>
-						<DropdownMenu.ItemIndicator />
-					</DropdownMenu.RadioItem>
-				</DropdownMenu.RadioGroup>
-
-				<DropdownMenu.Sub>
-					<DropdownMenu.SubTrigger />
-					<DropdownMenu.Portal>
-						<DropdownMenu.SubContent />
-					</DropdownMenu.Portal>
-				</DropdownMenu.Sub>
-
-				<DropdownMenu.Separator />
-				<DropdownMenu.Arrow />
-			</DropdownMenu.Content>
-		</DropdownMenu.Portal>
-	</DropdownMenu.Root>
-);
+				<DropdownMenu.Item asChild>
+            <Link href="/users/create-profile">Create Profile</Link>
+          </DropdownMenu.Item>
+        </DropdownMenu.Content>
+        </DropdownMenu.Portal>
+    </DropdownMenu.Root>
+  )
+}
