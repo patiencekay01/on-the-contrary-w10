@@ -22,11 +22,20 @@ export default async function IndividualPostPage({params}) {
 
 
     return (
-    <div>
-        <div>
-            <h3>{post.username}</h3>
-            <p>{post.content}</p>
-        </div>
-    </div>
+    <main className="min-h-screen bg-neutral-100 flex items-center justify-center px-4">
+
+      <article className="w-full max-w-2xl rounded-2xl border border-neutral-200 bg-white shadow-lg p-10">
+
+        <h2 className="text-2xl font-bold mb-6 text-neutral-900">
+          {post.username}
+        </h2>
+
+        <p className="text-lg leading-8 text-neutral-800">
+          {post.content}
+        </p>
+
+      </article>
+
+    </main>
     )
 }
