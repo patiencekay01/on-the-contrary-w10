@@ -19,13 +19,16 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-
+.homepage {
   background-image: url("/unpopular.png");
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
