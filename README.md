@@ -1,36 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Introduction:
+A social platform where users can share and browse unpopular opinions. Users can create an account, set up a profile page, and post their own opinions to the public feed. Each post can also be viewed individually.
+This application was built using Next.js with the App Router, PostgresSQL for the database, and Clerk for user authentication and management. This application also incorporates aspects of Radix UI in user interface, as well as Tailwind CSS to add custom style.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Reflection:
+The logic behind this project was significantly more difficult to grasp than previous work. One moment that stood out was when I added the redirect function and thought the entire application had broken because the homepage stopped loading. After investigating, I realised that the redirect was behaving exactly as intended. Through this, I began to understand the flow of authentication within an application.
+One moment that stood out was when I added the redirect function and thought the entire application had broken because the homepage stopped loading. After investigating, I realised that the redirect was behaving exactly as intended. Although the project itself is relatively simple, it became quite fiddly due to the number of routes, components, and interactions involved. There were several moments where I thought a feature was complete, only to realise there was another route or page that needed to be created.
+I also encountered some unexpected difficulties when implementing the dropdown menu using Radix UI. I originally thought it would be a quick addition, but it required a lot of debugging before it worked properly. One issue I was unable to fully resolve was that the posts appear to repeat in the feed.
+With more time, I would have liked to add additional interactive features such as a like button and comment field on the individual post pages. I would have also improved the navigation by adding a back button and ensured the menu is accessible on every page. In addition, introducing more visual styling, colours, and hover effects would have improved the overall user experience.
